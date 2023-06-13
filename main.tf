@@ -22,6 +22,8 @@ resource "google_compute_instance" "this" {
   description  = var.description
   tags         = var.tags
   labels       = var.labels
+  deletion_protection = var.deletion_protection
+  project      = var.project
 
   boot_disk {
     initialize_params {

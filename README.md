@@ -1,6 +1,10 @@
 # dwerryhouse-terraform-gcp-compute-instance
 Terraform module which creates a Google Cloud Platform Compute Instance
 
+## Introduction
+
+This module has been designed to allow a GCP compute instance to be spun up 
+with as few parameters as possible.
 
 ## Example of use
 

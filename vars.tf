@@ -27,6 +27,12 @@ variable "boot_disk_type" {
   default     = "pd-standard"
 }
 
+variable "deletion_protection" {
+  type        = string
+  description = "Set to true to prevent instance from being deleted"
+  default     = false
+}
+
 variable "description" {
   type        = string
   description = "Instance description"
@@ -67,10 +73,10 @@ variable "ssh_key_file" {
   description = "Path to public ssh key file"
 }
 
-variable "username" {
+variable "project" {
   type        = string
-  description = "Login User"
-  default     = "admin"
+  description = "(Optional) the project-id where this instance belongs"
+  default     = null
 }
 
 variable "tags" {
@@ -78,6 +84,13 @@ variable "tags" {
   default     = []
   description = "List of tags for the instance"
 }
+
+variable "username" {
+  type        = string
+  description = "Login User"
+  default     = "admin"
+}
+
 
 variable "zone" {
   type        = string
